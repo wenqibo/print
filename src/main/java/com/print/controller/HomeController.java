@@ -14,4 +14,8 @@ public class HomeController {
 		return "index";
 	}
 
+	@RequestMapping(value = "/reactjs", method = RequestMethod.GET)
+	public String reactjs(HttpServletRequest request){
+		return "reactjs";
+	}
 }
