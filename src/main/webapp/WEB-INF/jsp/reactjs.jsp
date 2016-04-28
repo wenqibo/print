@@ -1,3 +1,21 @@
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/css/app.css" rel="stylesheet" type="text/css">
+<style>
+    html, body {
+        color: #333;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .page-title {
+        font-weight: bold;
+        font-size: 64px;
+    }
+    a {
+        color: #333;
+    }
+    a:hover {
+        color: #000;
+    }
+</style>
 <div id="container">
     dd
 </div>
@@ -31,15 +49,9 @@
             var rows = [];
             var lastCategory = null;
             this.props.products.forEach(function(product) {
-                console.log("111")
-                console.log(product.name)
-                console.log(this.props.filterText)
-                console.log(this.props.inStockOnly)
-                console.log(product.stocked)
                 if (product.name.indexOf(this.props.filterText) === -1 || (!product.stocked && this.props.inStockOnly)) {
                     return;
                 }
-                console.log("222")
                 if (product.category !== lastCategory) {
                     rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
                 }
@@ -62,9 +74,6 @@
 
     var SearchBar = React.createClass({
         handleChange: function() {
-            console.log(this.refs.filterTextInput.value + "------" + this.refs.inStockOnlyInput.checked);
-            console.log(this)
-            console.log(this.refs.filterTextInput)
             this.props.onUserInput(
                     this.refs.filterTextInput.value,
                     this.refs.inStockOnlyInput.checked
@@ -142,5 +151,6 @@
             <FilterableProductTable products={PRODUCTS} />,
             document.getElementById('container')
     );
+
 
 </script>
