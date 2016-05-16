@@ -1,0 +1,10 @@
+[user]
+	name = kevin
+	email = kevin@huabid.com
+[branch]  
+  autosetuprebase = always
+[core]
+	autocrlf = false
+	safecrlf = true
+[push]
+	default = simple

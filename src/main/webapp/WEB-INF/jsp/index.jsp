@@ -87,7 +87,7 @@ body {
 			<li class="ui-state-default">16</li>
 		</ul>
         </div>
-		<a href="/reactjs" target="_blank">reactjs测试</a>
+		<%--<a href="/reactjs" target="_blank">reactjs测试</a>--%>
 	</div>
 	
 	<!-- /.container -->

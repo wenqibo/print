@@ -10,12 +10,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public String test(HttpServletRequest request){
+	public String index(HttpServletRequest request){
 		return "index";
 	}
 
 	@RequestMapping(value = "/reactjs", method = RequestMethod.GET)
 	public String reactjs(HttpServletRequest request){
 		return "reactjs";
+	}
+
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public String test(HttpServletRequest request){
+
+		return "test";
 	}
 }
